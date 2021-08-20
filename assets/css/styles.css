@@ -1,11 +1,17 @@
 .banner {
   height: 100vh;
-  background-color: #0d0e0e;
+  background-image: url("/assets/img/5e434b7ca7ffe035e8d4a814_the-futur-chris-do-billion-mission.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .banner header {
   height: 100px;
   display: flex;
   align-items: center;
+}
+.banner header menu {
+  position: relative;
+  padding-right: 100px;
 }
 .banner header menu ul {
   list-style: none;
@@ -19,12 +25,130 @@
   font-size: 1.8rem;
   color: #fff;
 }
-.banner header menu .menu-btn {
-  margin-left: 25px;
-  height: 3px;
+.banner header menu .menu_burger {
   width: 40px;
-  border-radius: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  z-index: 100;
+}
+.banner header menu .menu_burger .menu-btn__burger {
+  position: relative;
+  width: 40px;
+  height: 2px;
   background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.banner header menu .menu_burger .menu-btn__burger::before, .banner header menu .menu_burger .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.banner header menu .menu_burger .menu-btn__burger::before {
+  transform: translateY(-10px);
+  width: 37px;
+}
+.banner header menu .menu_burger .menu-btn__burger::after {
+  transform: translateY(10px);
+  width: 34px;
+}
+.banner header menu .menu_burger.active .menu-btn__burger {
+  transform: translateX(-40px);
+  background: transparent;
+}
+.banner header menu .menu_burger.active .menu-btn__burger::before {
+  transform: rotate(45deg) translate(40px, -40px);
+}
+.banner header menu .menu_burger.active .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(40px, 40px);
+}
+.banner header menu .menu_burger:hover .menu-btn__burger::before, .banner header menu .menu_burger:hover .menu-btn__burger::after {
+  width: 40px;
+}
+.banner header .menu-nav {
+  background-color: #0d0e0e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+}
+.banner header .menu-nav .card-top {
+  height: 100px;
+}
+.banner header .menu-nav .card-top .menu_cross {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  right: 0;
+  z-index: 100;
+  margin-left: 75px;
+}
+.banner header .menu-nav .card-top .menu_cross .menu-btn__cross {
+  position: relative;
+}
+.banner header .menu-nav .card-top .menu_cross .menu-btn__cross::before, .banner header .menu-nav .card-top .menu_cross .menu-btn__cross::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 2px;
+  width: 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.banner header .menu-nav .card-top .menu_cross .menu-btn__cross::before {
+  transform: rotate(45deg);
+}
+.banner header .menu-nav .card-top .menu_cross .menu-btn__cross::after {
+  transform: rotate(-45deg);
+}
+.banner header .menu-nav .card-top .menu_cross:hover .menu-btn__burger::before, .banner header .menu-nav .card-top .menu_cross:hover .menu-btn__burger::after {
+  width: 40px;
+}
+.banner header .menu-nav .card-top .card-top-menu ul {
+  list-style: none;
+}
+.banner header .menu-nav .card-top .card-top-menu ul li {
+  list-style-type: none;
+  padding-left: 25px;
+}
+.banner header .menu-nav .card-top .card-top-menu ul li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.banner .slider-caption {
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+.banner .slider-caption h1 {
+  font-size: 9.38rem;
+  line-height: 0.89;
+  margin-bottom: 0.4em;
+}
+.banner .slider-caption p {
+  font-weight: 200;
+  font-size: 2em;
+  width: 60%;
+  line-height: 1.13;
 }
 
 /*# sourceMappingURL=styles.css.map */
