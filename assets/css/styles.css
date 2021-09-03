@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .banner {
   height: 100vh;
   background-image: url("/assets/img/5e434b7ca7ffe035e8d4a814_the-futur-chris-do-billion-mission.jpg");
@@ -149,6 +150,86 @@
   font-size: 2em;
   width: 60%;
   line-height: 1.13;
+}
+.banner .hero-body {
+  height: 70vh;
+}
+.banner .hero-body .hero-card-top a {
+  text-decoration: none;
+  color: #fff;
+}
+.banner .hero-body .hero-card-top .card-item h2 {
+  font-weight: 400;
+  margin-bottom: 25px;
+  position: relative;
+}
+.banner .hero-body .hero-card-top .card-item h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0%;
+  padding: 0px;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+.banner .hero-body .hero-card-top .card-item p {
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.banner .hero-body .hero-card-top .card-item p.hero-btn {
+  font-weight: 400;
+}
+.banner .hero-body .hero-card-top .card-item p.hero-btn::before {
+  content: "";
+  position: absolute;
+  font-family: "fontAwesome";
+  bottom: 0;
+  left: 140px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.banner .hero-body .hero-card-top .card-item:hover h2::before {
+  width: 100%;
+  padding: 1px;
+}
+.banner .hero-body .hero-card-top .card-item:hover p.hero-btn::before {
+  left: 150px;
+  opacity: 1;
+}
+.banner .hero-body .hero-card-bottom ul {
+  list-style: none;
+}
+.banner .hero-body .hero-card-bottom ul li {
+  position: relative;
+  line-height: 40px;
+}
+.banner .hero-body .hero-card-bottom ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s;
+  font-weight: 300;
+}
+.banner .hero-body .hero-card-bottom ul li.title {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.banner .hero-body .hero-card-bottom ul li.item i {
+  transition: all 0.2s;
+  color: #fff;
+  opacity: 0;
+  margin-left: 0;
+}
+.banner .hero-body .hero-card-bottom ul li.item:hover a {
+  font-weight: 700;
+}
+.banner .hero-body .hero-card-bottom ul li.item:hover i {
+  opacity: 1;
+  margin-left: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
